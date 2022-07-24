@@ -1,0 +1,101 @@
+@import "../../mixin.scss";
+.movie-card{
+    scroll-snap-align: center;
+    position: relative;
+    height: 450px;
+    min-width: 300px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: -8px 5px 3px rgb(75, 74, 74);
+    @include phone-only{
+        height: 450px;
+    }
+    margin-left: 1rem;
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            
+            display: block;
+            object-position: center;
+            cursor: pointer;
+        }
+        .movie-info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            span{
+                background-color: rgb(198, 23, 23);
+                padding: 1rem;
+                font-weight: bold;
+            }
+
+            .movie-data{
+                background-color: rgba(0, 0, 0, 0.681);
+                width: 100%;
+               .data{
+                margin-left: 1rem;
+               }
+            }
+
+            .genre-rating{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: rgba(255, 255, 255, 0.052);
+                padding: 0 1rem;
+                .genre{
+                    color: rgb(214, 32, 32);
+                    font-weight: bold;
+                }
+                .rating{
+                    display: flex;
+                    gap: .5rem;
+                    align-items: center;
+                }
+            }
+
+        }
+        .image-play{
+            height: 0;
+            width: 0;
+            position: absolute;
+            overflow: hidden;
+        }
+       &:hover >  .image-play{
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0, 0, 0, 0.855);
+        transition: all .2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .btn-play{
+            font-size: 3rem;
+            cursor: pointer;
+            color: white;
+            filter: drop-shadow(0 5px 10px rgba(32, 103, 235, 0.7));;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        font-weight: bold;
+        .summary {
+            font-size: 1rem;
+            max-height: 200px;
+            overflow-x: scroll;
+            text-align: center;
+        }
+    }
+   }

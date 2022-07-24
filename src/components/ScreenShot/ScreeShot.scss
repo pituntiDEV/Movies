@@ -1,0 +1,17 @@
+.screeShot{
+    h2{
+        text-align: center;
+        color:rgb(231, 65, 65);
+        font-size:2rem
+    }
+    .image-container{
+        display: grid;
+        max-width: 400px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        img{
+          width: 100%;
+        }
+    }
+
+}

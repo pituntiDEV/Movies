@@ -1,0 +1,148 @@
+@import "../../mixin.scss";
+.movie-container{
+    position: relative;
+    margin: 0 auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 400px;
+    max-width: 1000px;
+
+    @include phone-only{
+        margin: 1rem .5rem;
+        padding: 2rem;
+    }
+     
+    .hero {
+        position: absolute; 
+         width: inherit;
+         height: inherit;
+         background-size: cover;
+         background-position: center !important;
+         background-repeat: no-repeat;
+         top: 0px;
+         right: 0px;
+         bottom: 0px;
+         left: 0px;
+    }
+
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+
+    .btn-play{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 5rem;
+        filter: drop-shadow(-3px 1px  5px rgb(62, 65, 200));
+    }
+ 
+    .movie-info{
+        position: relative;
+        margin: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        word-wrap: break-word;
+        h2{
+            font-size: 2rem;
+        }
+       .data{
+        display: flex;
+        flex-direction: column;
+        .data-info{
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            p{
+                margin: 0;
+            }
+            @include phone-only{
+            }
+        }
+        .quality{
+            background-color: rgb(201, 42, 42);
+            padding: .2rem .5rem;
+            display: inline;
+            border-radius: .3rem;
+        }
+    }
+    .lang{
+        background-color: gray;
+        display: inline;
+        margin-top: 1rem;
+        padding: .3rem .5rem;
+        border-radius: .2rem;
+        
+        
+    }
+
+    .genre{
+        
+        
+        font-family: 'Courier New', Courier, monospace;
+        color: rgb(249, 21, 21);
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        text-shadow: -.5px 0px .5px white;
+        @include phone-only{
+            text-align: center;
+        }
+        span{
+            &:nth-child(1){
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .bottom-content{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin: 1rem 0;
+        @include phone-only{
+            flex-direction: column;
+        }
+        .trailer{
+            border:solid rgb(255, 255, 255) 1px;
+            padding: 1rem;
+        }
+    }
+        
+    }
+}
+
+.summary{
+ max-width: 1000px;
+ margin: 0 auto;   
+ text-align: center;
+}
+.video-player{
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0, 0, 0,0.7);
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .bnt-close{
+        position: absolute;
+        top:1em;
+        font-size: 2rem;
+        background-color: rgb(82, 80, 80);
+        width: 42px;
+        height: 42px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+       
+
+    }
+}

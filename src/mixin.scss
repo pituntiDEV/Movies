@@ -1,0 +1,13 @@
+@mixin phone-only {
+    @media (max-width: 768px) {
+        @content;
+    }
+    
+}
+
+@mixin phone-only-landscape {
+    @media screen and (max-width:900px)  and (orientation:landscape) {
+        @content;
+    }
+    
+}

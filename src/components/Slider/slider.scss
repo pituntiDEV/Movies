@@ -1,0 +1,39 @@
+@import "../../mixin.scss";
+.slide-container{
+   position: relative;
+   display: flex;
+  justify-content: center;
+    margin-top: 2rem;
+    
+    .slide{
+        display: flex;
+        scroll-snap-type: x mandatory;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        user-select: none; 
+    }
+    .control{
+        background: rgb(63, 63, 63);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        position: absolute;
+        z-index: 2;
+    }
+    .prev{
+        left: 0;
+        top:50%;
+        transform: translate(10%,-50%);
+    }
+    .next{
+        right: 0;
+        top:50%;
+        transform: translate(-10%,-50%);
+    }
+}

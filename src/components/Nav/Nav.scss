@@ -1,0 +1,103 @@
+@import "../../mixin.scss"; 
+.menu{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    position: fixed;
+    z-index: 11;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-close{
+        position: absolute;
+        top: -4rem;
+        font-size: 2rem;
+        
+    }
+    .links-container{
+        position: relative;
+        .links{
+            display: flex;
+            gap:2rem;
+            color: rgb(241, 42, 42);
+            font-weight: bold;
+            @include phone-only{
+                flex-direction: column;
+            }
+            p{
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+    
+        }
+    }
+   
+}
+  .menu{
+    overflow: scroll;
+    font-size: 2.5rem;
+    p{
+        margin-top: 0rem;
+       @include phone-only{
+        font-size: 1.5rem;
+       }
+}
+  }
+.nav{
+    display: flex;
+    justify-content: space-between;
+    position: sticky; 
+    top: 0px;
+    z-index: 4;
+    padding: 2rem;
+    background-color: black;
+    @include phone-only{
+        flex-direction: column;
+        align-items: center;
+    }
+    align-items: center;
+  
+    .left-side{
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        i{
+            color:white;
+            font-size: 2rem;
+            @include phone-only{
+               position: absolute;
+               left: 2rem;
+            }
+        }
+        
+        h1{
+            position: relative;
+            color: rgb(228, 41, 41);
+            small{
+                position: absolute;
+                top: 50%;
+                transform: translate(10%, -50%);
+                font-size: .6rem;
+            }
+        }
+    }
+    .search{
+        background-color: white;
+        display: flex;
+        padding: .3rem;
+        align-items: center;
+        border-radius: .2rem;
+        input{
+            height: 100%;
+            border: none;
+            outline: none;
+        }
+        i{
+            color:black
+        }
+    }
+}
